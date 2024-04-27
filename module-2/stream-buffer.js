@@ -13,3 +13,7 @@ readableStream.on("error", (err) => {
 writeableStream.on("error", (err) => {
   throw new Error(err);
 });
+
+writeableStream.on('finish', ()=>{
+  console.log('finish writeable stream');
+})
